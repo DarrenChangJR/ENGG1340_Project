@@ -1,4 +1,5 @@
 #include "bandit.h"
+#include "printer.h"
 
 #include <iostream>
 
@@ -10,5 +11,15 @@ int main() {
   bandit1.deductHealth(10);
   cout << bandit1.getHealth() << endl;
   cout << bandit1.getAttack() << endl;
+
+
+  Printer game_printer;
+  game_printer.intro();
+  game_printer.ending();
+  game_printer.optionsFight();
+  cout << endl;
+  game_printer.optionsService();
+  cout << endl;
+  game_printer.death();
   return 0;
 }
