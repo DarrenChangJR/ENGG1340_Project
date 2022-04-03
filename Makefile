@@ -8,3 +8,8 @@ fake_main.o: fake_main.cpp bandit.h
 
 fake_main: fake_main.o bandit.o
 	g++ $(FLAGS) $^ -o $@
+
+clean:
+	rm -rf *.o fake_main
+
+.PHONY: clean
