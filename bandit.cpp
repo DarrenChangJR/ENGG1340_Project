@@ -6,7 +6,7 @@
 Bandit::Bandit(int n) {
   health = 100 * n;
   base_attack = 21 * n;
-  luck_multiplier = n;
+  luck_multiplier = 10 * n;
 }
 
 void Bandit::deductHealth(double n) {
@@ -19,6 +19,6 @@ double Bandit::getHealth() {
 
 double Bandit::getAttack() {
   srand(time(NULL));
-  double total_attack = base_attack * (rand() % luck_multiplier * 0.5 + 0.8);
+  double total_attack = base_attack + (rand() % luck_multiplier);
   return total_attack;
 }
