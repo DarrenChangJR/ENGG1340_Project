@@ -14,6 +14,7 @@ void Printer::intro() {
     cout << scene_line << endl;
     usleep(100000);
   }
+  fin.close();
 }
 
 void Printer::bandit() {
@@ -72,6 +73,7 @@ void Printer::accolade() {
     cout << scene_line << endl;
     usleep(100000);
   }
+  fin.close();
 }
 
 void Printer::ending() {
@@ -81,4 +83,5 @@ void Printer::ending() {
     cout << scene_line << endl;
     sleep(1);
   }
+  fin.close();
 }
