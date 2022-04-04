@@ -15,11 +15,13 @@ int main() {
 
   Printer game_printer;
   game_printer.intro();
-  game_printer.ending();
   game_printer.optionsFight();
   cout << endl;
   game_printer.optionsService();
   cout << endl;
   game_printer.death();
+  game_printer.bandit();
+  game_printer.ending();
+  game_printer.accolade();
   return 0;
 }

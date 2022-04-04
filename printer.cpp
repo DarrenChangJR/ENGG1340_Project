@@ -1,34 +1,45 @@
 #include "printer.h"
 
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <unistd.h>
 
 using namespace std;
 
 void Printer::intro() {
+  ifstream fin("scenes/battle_of_camlann.txt");
+  string scene_line;
+  while (getline(fin, scene_line)) {
+    cout << scene_line << endl;
+    usleep(100000);
+  }
+}
+
+void Printer::bandit() {
   cout <<
 R"(
-     .______        ___   .___________.___________. __       _______      
-     |   _  \      /   \  |           |           ||  |     |   ____|     
-     |  |_)  |    /  ^  \ `---|  |----`---|  |----`|  |     |  |__        
-     |   _  <    /  /_\  \    |  |        |  |     |  |     |   __|       
-     |  |_)  |  /  _____  \   |  |        |  |     |  `----.|  |____      
-     |______/  /__/     \__\  |__|        |__|     |_______||_______|     
-                                                                          
-                             ______    _______                            
-                            /  __  \  |   ____|                           
-                           |  |  |  | |  |__                              
-                           |  |  |  | |   __|                             
-                           |  `--'  | |  |                                
-                            \______/  |__|                                
-                                                                          
-  ______     ___      .___  ___.  __          ___      .__   __. .__   __.
- /      |   /   \     |   \/   | |  |        /   \     |  \ |  | |  \ |  |
-|  ,----'  /  ^  \    |  \  /  | |  |       /  ^  \    |   \|  | |   \|  |
-|  |      /  /_\  \   |  |\/|  | |  |      /  /_\  \   |  . `  | |  . `  |
-|  `----./  _____  \  |  |  |  | |  `----./  _____  \  |  |\   | |  |\   |
- \______/__/     \__\ |__|  |__| |_______/__/     \__\ |__| \__| |__| \__|
+           ____
+          /    \
+         //\    \
+        //  \_   \
+        \\___/   /_    _
+        /          \--;
+       /         ,_,\___
+       \._.__.    \ \__ \___,--
+        || \       \ \
+        || |,__     \ \
+       \;| |   '---\_| |_
+       /\; /  _     ;+ +-'
+      / /\/  / \_   /| |
+     / / /  /    \  \| |
+    /_/  \ /     /  /| |
+          \\     \ | |/
+          /_\     ||
+                  ||
+                 /_|
+           Health:
 )";
-
 }
 
 void Printer::death() {
@@ -44,7 +55,6 @@ ______ _____  ___ _____ _   _
 You succumb to the darkness of death...
 Returning to the last saved state.
 )";
-
 }
 
 void Printer::optionsFight() {
@@ -55,19 +65,20 @@ void Printer::optionsService() {
   cout << "Yes / No : ";
 }
 
+void Printer::accolade() {
+  ifstream fin("scenes/accolade.txt");
+  string scene_line;
+  while (getline(fin, scene_line)) {
+    cout << scene_line << endl;
+    usleep(100000);
+  }
+}
+
 void Printer::ending() {
-  cout <<
-R"(
-The clash of armour, swords, and shields
-Ceased with a critical strike of your blade.
-Your foe lies lifeless on the batlefield
-Your foe, "Mordred, the Renegade".
-
-The people of Camelot sing songs of your fight
-"The slayer of Mordred - {Warrior} the "
-None is stranger to your loyalty and might
-bbla bla bla
-
-Your feat is commended by ba bla
-)";
+  ifstream fin("scenes/ending.txt");
+  string scene_line;
+  while (getline(fin, scene_line)) {
+    cout << scene_line << endl;
+    sleep(1);
+  }
 }
