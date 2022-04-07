@@ -15,6 +15,16 @@ void Printer::intro() {
     usleep(100000);
   }
   fin.close();
+
+  // Introduction of story
+
+  ifstream fin("scenes/Intro.txt");
+  string sentences;
+  while(getline(fin,sentences)){
+    cout << sentences << endl;
+    usleep(100000);
+  }
+  fin.close();
 }
 
 void Printer::bandit() {
