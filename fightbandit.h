@@ -3,6 +3,6 @@
 
 #include "bandit.h"
 
-void fightBandit(bandit);
+void fightBandit(Character, Bandit);
 
 #endif
