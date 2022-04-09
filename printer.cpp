@@ -27,7 +27,7 @@ void Printer::intro() {
   fin.close();
 }
 
-void Printer::bandit() {
+void Printer::banditCharacter() {
   cout <<
 R"(
            ____
@@ -51,6 +51,10 @@ R"(
                  /_|
            Health:
 )";
+}
+
+void Printer::banditAppear() {
+  cout << "You are ambushed by bandits!";
 }
 
 void Printer::death() {

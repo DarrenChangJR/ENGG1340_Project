@@ -5,7 +5,8 @@ class Printer {
 
 public:
   void intro();
-  void bandit();
+  void banditCharacter();
+  void banditAppear();
   void death();
   void optionsFight();
   void optionsService();
