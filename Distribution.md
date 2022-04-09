@@ -44,6 +44,14 @@ Final boss: both
 * Function to store current character info
   - Array to store player health, items, attack dmg, luck
 
+
+** Character Array (Details) **
+* Health [Double]
+* Damage [Double]
+* Luck/crit chance [int] (so when crit chance increase we increase a variable call crit then when randomising we take our total random - crit to get the number we random in.)
+* Items (Max items 5?) (Armour, sword, sheild, spear and long axe) So an array of 5 items [Array of strings]
+* Experience (XP lvl 1-5 lvl) (Increase Experience by holy blessing) [Double]
+
 Extra stuff:
 https://emojicombos.com/knight
 https://www.newgrounds.com/art/view/moopseal/ascii-knight
