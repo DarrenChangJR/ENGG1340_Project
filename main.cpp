@@ -1,8 +1,8 @@
 // This file is intended to contain all our main program function to run the program.
 #include "character.h"
-// #include "fightbandit.h"
-// #include "printer.h"
-// #include "bandit.h"
+// #include "fight.h"
+#include "printer.h"
+#include "bandit.h"
 // #include "commser.h"
 
 #include <iostream>

@@ -5,4 +5,6 @@
 
 void fightBandit(Character, Bandit);
 
+// void fightMordred(Character, Mordred);
+
 #endif
