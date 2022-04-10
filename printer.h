@@ -9,8 +9,8 @@ public:
   void banditCharacter();
   void banditAppear();
   void death();
-  void optionsFight();
-  void optionsService();
+  void options(string &positive, string &negative);
+  void flee();
   void accolade();
   void ending();
 };

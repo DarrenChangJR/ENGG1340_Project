@@ -73,12 +73,12 @@ Returning to the last saved state.
 )";
 }
 
-void Printer::optionsFight() {
-  cout << "Attack / Flee : ";
+void Printer::options(string &positive, string &negative) {
+  cout << positive << " / " << negative << " : ";
 }
 
-void Printer::optionsService() {
-  cout << "Yes / No : ";
+void Printer::flee() {
+  cout << "Faster than wind, you flee the scene...\n"
 }
 
 void Printer::accolade() {

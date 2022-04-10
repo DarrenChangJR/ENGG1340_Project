@@ -16,6 +16,11 @@ using namespace std;
 int main(){
 
     // Output Intro
+    Printer main_printer; // create a printer object to handle all printing in main.cpp
+
+    main_printer.battleOfCamlann();
+    // implement input "New Game/Continue"
+
 
     // Get user name and gender
     string name = "Najib";
