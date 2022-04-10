@@ -1,4 +1,9 @@
 // This file is intended to contain all our main program function to run the program.
+#include "character.h"
+// #include "fight.h"
+#include "printer.h"
+#include "bandit.h"
+// #include "commser.h"
 
 #include <iostream>
 #include <string>
@@ -6,17 +11,6 @@
 
 using namespace std;
 
-// Struct for Character
-struct Character {
-    string name;
-    string gender;
-    double health;
-    double attack;
-    double experience;
-    int luck;
-    string items[5];
-    
-};
 
 
 int main(){
@@ -24,7 +18,15 @@ int main(){
     // Output Intro
 
     // Get user name and gender
-    Character user;
+    string name = "Najib";
+    string gender = "Rosmah";
+    Character user(name, gender);
+    cout << user.getName() << endl;
+    cout << user.getGender() << endl;
+    cout << user.getHealth() << endl;
+    cout << user.getAttack() << endl;
+    cout << user.getExperience() << endl;
+    cout << user.getLuck() << endl;
     // Run intro and community service func and file
 
     // Run bandit community service and file

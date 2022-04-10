@@ -6,13 +6,16 @@ printer.o: printer.cpp printer.h
 bandit.o: bandit.cpp bandit.h
 	g++ $(FLAGS) -c  $<
 
-fake_main.o: fake_main.cpp bandit.h printer.h
-	g++ $(FLAGS) -c  $<
+character.o: character.cpp character.h
+	g++ $(FLAGS) -c $<
 
-fake_main: fake_main.o bandit.o printer.o
-	g++ $(FLAGS) $^ -o $@
+main.o: main.cpp character.h printer.h bandit.h
+	g++ $(FLAGS) -c $<
+
+main: main.o character.o printer.o bandit.o
+	g++ $(FLAGS) $^ -o  $@
 
 clean:
-	rm -rf *.o fake_main
+	rm -rf *.o
 
 .PHONY: clean

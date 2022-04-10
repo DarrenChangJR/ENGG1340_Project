@@ -24,3 +24,5 @@ void fightBandit(Character &user, Bandit &bandit) {
     }
   }
 }
+
+// void fightMordred(Character &user, Mordred &mordred)

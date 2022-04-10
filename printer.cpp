@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void Printer::intro() {
+void Printer::battleOfCamlann() {
   ifstream fin("scenes/battle_of_camlann.txt");
   string scene_line;
   while (getline(fin, scene_line)) {
@@ -15,9 +15,10 @@ void Printer::intro() {
     usleep(100000);
   }
   fin.close();
+}
 
+void Printer::intro() {
   // Introduction of story
-
   ifstream fin("scenes/Intro.txt");
   string sentences;
   while(getline(fin,sentences)){
