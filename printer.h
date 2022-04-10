@@ -4,8 +4,10 @@
 class Printer {
 
 public:
+  void battleOfCamlann();
   void intro();
-  void bandit();
+  void banditCharacter();
+  void banditAppear();
   void death();
   void optionsFight();
   void optionsService();

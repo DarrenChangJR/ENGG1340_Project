@@ -7,25 +7,28 @@
 
 using namespace std;
 
-void Printer::intro() {
+void Printer::battleOfCamlann() {
   ifstream fin("scenes/battle_of_camlann.txt");
   string scene_line;
   while (getline(fin, scene_line)) {
     cout << scene_line << endl;
     usleep(100000);
   }
+  fin.close();
+}
 
+void Printer::intro() {
   // Introduction of story
-
   ifstream fin("scenes/Intro.txt");
   string sentences;
   while(getline(fin,sentences)){
     cout << sentences << endl;
     usleep(100000);
   }
+  fin.close();
 }
 
-void Printer::bandit() {
+void Printer::banditCharacter() {
   cout <<
 R"(
            ____
@@ -49,6 +52,10 @@ R"(
                  /_|
            Health:
 )";
+}
+
+void Printer::banditAppear() {
+  cout << "You are ambushed by bandits!";
 }
 
 void Printer::death() {
@@ -81,6 +88,7 @@ void Printer::accolade() {
     cout << scene_line << endl;
     usleep(100000);
   }
+  fin.close();
 }
 
 void Printer::ending() {
@@ -90,4 +98,5 @@ void Printer::ending() {
     cout << scene_line << endl;
     sleep(1);
   }
+  fin.close();
 }
