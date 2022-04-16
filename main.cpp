@@ -3,7 +3,7 @@
 // #include "fight.h"
 #include "printer.h"
 #include "bandit.h"
-//#include "commser.h"
+
 
 #include <iostream>
 #include <string>
@@ -11,16 +11,7 @@
 #include <ctime>
 
 using namespace std;
-/*
-struct player {
-    string name;
-    string gender;
-    double health;
-    double attack;
-    double experience;
-    int luck;
-};
-*/
+
 int main(){
 
     // Output Intro
@@ -41,7 +32,7 @@ int main(){
     //srand to seed random generator
     srand(time(NULL));
     int random = rand()%4;
-    
+
     if (random == 0){
         user.helpingChruch(); 
         int random0 = rand()%3;
