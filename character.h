@@ -22,6 +22,15 @@ public:
 
   // vector<string> getItems();
 
+  // ------------------------------ COMMUNITY SERVICE FUNCTIONS ------------------------------//
+  // need random func to choose 2 out of 4
+  // need the 5 functions
+  void helpingChruch();
+  void foodShortage();
+  void helpingPoorAndSick();
+  void festival();
+  void patrolCity();
+
 private:
   string name;
   string gender;

@@ -9,10 +9,11 @@ bandit.o: bandit.cpp bandit.h
 character.o: character.cpp character.h
 	g++ $(FLAGS) -c $<
 
+
 main.o: main.cpp character.h printer.h bandit.h
 	g++ $(FLAGS) -c $<
 
-main: main.o character.o printer.o bandit.o
+main: main.o character.o printer.o bandit.o 
 	g++ $(FLAGS) $^ -o  $@
 
 clean:
