@@ -1,23 +1,19 @@
-#ifndef CHARACTER_H
-#define CHARACTER_H
-
 #include "character.h"
 #include <string>
 #include <vector>
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
 #include <unistd.h>
 
 using namespace std;
 
-Character::Character(string user_name, string user_gender, double user_health, double user_attack, double user_experience, int user_luck) {
+Character::Character(string user_name, string user_gender, vector<string> user_items, double user_experience, int user_luck) {
   name = user_name;
   gender = user_gender;
-  health = user_health;
-  attack = user_attack;
+  items = user_items;
   experience = user_experience;
   luck = user_luck;
-  // items = user_items;
 }
 
 string Character::getName() {
@@ -28,12 +24,14 @@ string Character::getGender() {
   return gender;
 }
 
-double Character::getHealth() {
-  return health;
+double Character::getAttack() {
+  srand(time(NULL));
+  double total_attack = (experience * 30) + (rand() % (luck * 10));
+  return total_attack;
 }
 
-double Character::getAttack() {
-  return attack;
+double Character::getHealth() {
+  return experience * 100;
 }
 
 double Character::getExperience() {
@@ -44,9 +42,28 @@ int Character::getLuck() {
   return luck;
 }
 
-// vector<string> Character::getItems() {
-//   return items;
-// }
+void Character::incrementExperience() {
+  ++experience;
+}
+
+void Character::incrementLuck() {
+  ++luck;
+}
+
+void Character::printItems() {
+  int counter = 0;
+  for (vector<string>::iterator i = items.begin(); i != items.end(); ++i) {
+      cout << counter++ << "  " << *i << endl;
+  }
+}
+
+int Character::getNumberOfItems() {
+  return items.size();
+}
+
+void Character::useItem(int item_number) {
+  items.pop_back();
+}
 
 // Character::~Character() {
 //   delete[] s;
@@ -348,5 +365,3 @@ void Character::patrolCity(){
     }
     
 }
-
-#endif
