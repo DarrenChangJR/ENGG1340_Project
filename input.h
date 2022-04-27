@@ -3,6 +3,6 @@
 
 #include <string>
 
-bool askUserIsProceed(string, string);
+bool askUserIsProceed(const string &, const string &);
 
 #endif

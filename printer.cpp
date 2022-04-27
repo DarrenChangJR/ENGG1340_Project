@@ -50,12 +50,19 @@ R"(
           /_\     ||
                   ||
                  /_|
-           Health:
-)";
+      Bandit Health: )";
 }
 
 void Printer::banditAppear() {
   cout << "You are ambushed by bandits!";
+}
+
+void Printer::mistake() {
+  cout << "You wasted time searching for items...\nA mistake in battle is an invitation for death...";
+}
+
+void Printer::elixir() {
+  cout << "You consume an elixir of health, and you heal to full health...";
 }
 
 void Printer::death() {
@@ -73,12 +80,12 @@ Returning to the last saved state.
 )";
 }
 
-void Printer::options(string &positive, string &negative) {
+void Printer::options(const string &positive, const string &negative) {
   cout << positive << " / " << negative << " : ";
 }
 
 void Printer::flee() {
-  cout << "Faster than wind, you flee the scene...\n"
+  cout << "Faster than wind, you flee the scene...\n";
 }
 
 void Printer::accolade() {

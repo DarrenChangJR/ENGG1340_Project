@@ -2,8 +2,9 @@
 #include "input.h"
 
 #include <string>
+#include <iostream>
 
-bool askUserIsProceed(string &positive, string &negative) {
+bool askUserIsProceed(const string &positive, const string &negative) {
   Printer options_printer;
   string input;
   while (true) {
