@@ -130,6 +130,9 @@ void Character::helpingChruch(){
         std::cout<< "Luck +1"<< endl;
         experience++; // can be adjusted
         luck++;
+        usleep(2000000);
+        std::cout<< "Congrats you gain an Elixir"<< endl;
+        items.push_back("Elixir");
     }
     else if(reply == "No"){
         std::cout << "Alright!" << endl;
@@ -184,6 +187,9 @@ void Character::foodShortage(){
         std::cout<< "Luck +1"<< endl;
         experience++; // can be adjusted
         luck++;
+        usleep(2000000);
+        std::cout<< "Congrats you gain an Elixir"<< endl;
+        items.push_back("Elixir");
     }
     else if(reply == "No"){
         std::cout << "Alright!" << endl;
@@ -235,6 +241,9 @@ void Character::helpingPoorAndSick(){
         std::cout<< "Luck +1"<< endl;
         experience++; // can be adjusted
         luck++;
+        usleep(2000000);
+        std::cout<< "Congrats you gain an Elixir"<< endl;
+        items.push_back("Elixir");
     }
     else if(reply == "No"){
         std::cout << "Alright!" << endl;
@@ -289,6 +298,9 @@ void Character::festival(){
         std::cout<< "Luck +1"<< endl;
         experience++; // can be adjusted
         luck++;
+        usleep(2000000);
+        std::cout<< "Congrats you gain an Elixir"<< endl;
+        items.push_back("Elixir");
     }
         
     else if(reply == "No"){
@@ -334,6 +346,9 @@ void Character::patrolCity(){
         std::cout<< "Luck +1"<< endl;
         experience++; // can be adjusted
         luck++;
+        usleep(2000000);
+        std::cout<< "Congrats you gain an Elixir"<< endl;
+        items.push_back("Elixir");
 
         usleep(5000000);
         // joined to bandit quest
