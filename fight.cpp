@@ -30,7 +30,7 @@ void fightBandit(Character &user, Bandit &bandit) {
       cout << endl << "Health: " << health_in_fight << endl;
 
       input = askUserIsProceed("Strike", "Items");
-      if (input) { // if user decides to strike
+      if (input) {  // user decides to strike
 
         cout << "Blades clash..." << endl;
         sleep(1);
@@ -39,7 +39,7 @@ void fightBandit(Character &user, Bandit &bandit) {
         bandit.deductHealth(damage);
         sleep(1);
 
-      } else {
+      } else {  // user decides to use items
         user.printItems();
         cout << "Please enter a number: ";
         int item_number;
@@ -74,7 +74,7 @@ void fightBandit(Character &user, Bandit &bandit) {
       cout << user.getName() << " the courageous!" << endl;
       sleep(1);
     } else {
-      cout << "You are defeated ";
+      fightPrinter.death();
       for (int i=0; i<3; ++i) {
         cout << ". ";
         sleep(1);
@@ -85,4 +85,70 @@ void fightBandit(Character &user, Bandit &bandit) {
     fightPrinter.flee();
 }
 
-// void fightMordred(Character &user, Mordred &mordred)
+void fightMordred(Character &user, Bandit &mordred) {
+  Printer fightPrinter;
+
+  // fight scene flow starts
+  fightPrinter.mordredAppear();
+  sleep(2);
+
+  double health_in_fight = user.getHealth(), damage;
+  while (mordred.getHealth() > 0 && health_in_fight > 0) { // while user and mordred are alive
+
+    fightPrinter.mordredCharacter();
+    cout << "           Mordred:\n              " << mordred.getHealth() << endl;
+    cout << endl << "Health: " << health_in_fight << endl;
+
+    bool input = askUserIsProceed("Strike", "Items");
+    if (input) {  // user decides to strike
+
+      cout << "Blades clash..." << endl;
+      sleep(1);
+      damage = user.getAttack();
+      cout << "Mordred sustained " << damage << " damage" << endl;
+      mordred.deductHealth(damage);
+      sleep(1);
+
+    } else {  // user decides to use items
+      user.printItems();
+      cout << "Please enter a number: ";
+      int item_number;
+      cin >> item_number;
+      if (item_number < user.getNumberOfItems() && item_number >= 0) {
+        user.useItem(item_number);
+        health_in_fight = user.getHealth();
+        fightPrinter.elixir();
+      } else {
+        fightPrinter.mistake();
+        sleep(1);
+      }
+      cout << endl;
+    }
+
+    if (mordred.getHealth() > 0) {
+      sleep(1);
+      damage = mordred.getAttack();
+      cout << "\"Arthur must pay with his life!\"" << endl;
+      health_in_fight -= damage;
+      sleep(1);
+      cout << "You sustain " << damage << " damage" << endl;
+    } else {
+      for (int i = 0; i < 60; ++i)
+        cout << endl;
+    }
+    sleep(2);
+  }
+
+  if (health_in_fight > 0) {
+    fightPrinter.ending();
+    sleep(3);
+  } else {
+    fightPrinter.death();
+    for (int i=0; i<3; ++i) {
+      cout << ". ";
+      sleep(1);
+    }
+    cout << endl;
+  }
+}
+

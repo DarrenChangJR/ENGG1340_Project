@@ -6,6 +6,6 @@
 
 void fightBandit(Character &, Bandit &);
 
-// void fightMordred(Character, Mordred);
+void fightMordred(Character &, Bandit &);
 
 #endif

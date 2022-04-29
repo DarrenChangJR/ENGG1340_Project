@@ -17,18 +17,18 @@ int main(){
 
     // Output Intro
     Printer main_printer; // create a printer object to handle all printing in main.cpp
-
     main_printer.battleOfCamlann();
-    // implement input "New Game/Continue"
 
 
     // Get user name and gender
-    string name = "Najib";
+    string name;
+    cout << "Please enter your name: ";
+    getline(cin, name);
     string gender = "Rosmah";
-    Character user(name, gender);
+    Character user(name, gender, vector<string> {}, 10, 10);
 
-    Bandit bandit1(1);
-    fightBandit(user, bandit1);
+    Bandit mordred(5);
+    fightMordred(user, mordred);
 
     // Run intro and community service func and file
     //srand to seed random generator
