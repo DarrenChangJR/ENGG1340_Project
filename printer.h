@@ -12,6 +12,8 @@ public:
   void intro();
   void banditCharacter();
   void banditAppear();
+  void mordredCharacter();
+  void mordredAppear();
   void mistake();
   void elixir();
   void death();

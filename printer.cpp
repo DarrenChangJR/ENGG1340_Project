@@ -57,6 +57,31 @@ void Printer::banditAppear() {
   cout << "You are ambushed by bandits!";
 }
 
+void Printer::mordredCharacter() {
+  ifstream fin("scenes/mordred.txt");
+  string scene_line;
+  while (getline(fin, scene_line))
+    cout << scene_line << endl;
+  fin.close();
+}
+
+void Printer::mordredAppear() {
+  ifstream fin("scenes/mordred.txt");
+  string scene_line;
+  while (getline(fin, scene_line)) {
+    cout << scene_line << endl;
+    usleep(300000);
+  }
+  fin.close();
+
+  string dramatic_line = "Arthur... You gave me no choice...";
+  for (int i = 0; i < dramatic_line.size(); ++i) {
+    cout << dramatic_line[i];
+    usleep(200000);
+  }
+  cout << endl;
+}
+
 void Printer::mistake() {
   cout << "You wasted time searching for items...\nA mistake in battle is an invitation for death...";
 }
@@ -75,9 +100,7 @@ ______ _____  ___ _____ _   _
 | |/ /| |___| | | || | | | | |
 |___/ \____/\_| |_/\_/ \_| |_/
 
-You succumb to the darkness of death...
-Returning to the last saved state.
-)";
+You succumb to the darkness of death)";
 }
 
 void Printer::options(const string &positive, const string &negative) {
