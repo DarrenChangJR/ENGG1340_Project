@@ -119,6 +119,7 @@ void Printer::accolade() {
     usleep(100000);
   }
   fin.close();
+  sleep(5);
 }
 
 void Printer::ending() {
@@ -129,4 +130,12 @@ void Printer::ending() {
     sleep(1);
   }
   fin.close();
+}
+
+void Printer::credits() {
+  string s = "Thanks for playing \"Battle Of Camlann\"\nCreated by Aidan and Darren\n";
+  for (int i = 0; i < s.size(); ++i) {
+    cout << s[i] << flush;
+    usleep(200000);
+  }
 }

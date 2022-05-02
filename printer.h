@@ -21,6 +21,7 @@ public:
   void flee();
   void accolade();
   void ending();
+  void credits();
 };
 
 #endif
