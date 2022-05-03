@@ -20,18 +20,14 @@ int main(){
     main_printer.battleOfCamlann();
 
     // Printing Intro
-    Printer Intro;
-    Intro.intro();
+    main_printer.intro();
     
     // Get user name and gender
     string name;
     cout << "Please enter your name: ";
     getline(cin, name);
     string gender = "Rosmah";
-    Character user(name, gender, vector<string> {}, 10, 10);
-
-    Bandit mordred(5);
-    //fightMordred(user, mordred);
+    Character user(name, gender, vector<string> {}, 1000, 10);
 
     // Run intro and community service func and file
     //srand to seed random generator
@@ -97,8 +93,16 @@ int main(){
     // Run story connection of how the character become morded guard
 
     // Run final arc
+    Bandit mordred(5);
+    bool alive = fightMordred(user, mordred);
+    if (!alive)  // ends the program if user dies lmaoo
+        return 0;
 
     // End game
+    for (int i = 0; i < 60; ++i)
+        cout << endl;
+    main_printer.credits();
+    main_printer.accolade();
 
     return 0;
 }

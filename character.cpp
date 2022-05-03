@@ -362,9 +362,10 @@ void Character::patrolCity(){
         usleep(2000000);
         std:: cout << "As you approach them to back of they started to drew their swords" << endl;
         usleep(2000000);
+        int s;
         for(int i = 1; i<4; i++){
             std::cout << "Sword clashing..." << " " << std::flush;
-            int s = s + 1000000;
+            s = s + 1000000;
             usleep(s);
         }
         std::cout << endl;

@@ -4,8 +4,8 @@
 #include "bandit.h"
 #include "character.h"
 
-void fightBandit(Character &, Bandit &);
+bool fightBandit(Character &, Bandit &);
 
-void fightMordred(Character &, Bandit &);
+bool fightMordred(Character &, Bandit &);
 
 #endif

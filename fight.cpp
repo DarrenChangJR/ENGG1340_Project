@@ -9,7 +9,7 @@
 #include <unistd.h>
 
 
-void fightBandit(Character &user, Bandit &bandit) {
+bool fightBandit(Character &user, Bandit &bandit) {
   Printer fightPrinter;
 
   // fight scene flow starts
@@ -80,12 +80,15 @@ void fightBandit(Character &user, Bandit &bandit) {
         sleep(1);
       }
       cout << endl;
+      return false;
     }
   } else
     fightPrinter.flee();
+
+  return true;
 }
 
-void fightMordred(Character &user, Bandit &mordred) {
+bool fightMordred(Character &user, Bandit &mordred) {
   Printer fightPrinter;
 
   // fight scene flow starts
@@ -149,6 +152,9 @@ void fightMordred(Character &user, Bandit &mordred) {
       sleep(1);
     }
     cout << endl;
+    return false;
   }
+
+  return true;
 }
 
