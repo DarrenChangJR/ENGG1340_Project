@@ -40,8 +40,9 @@ void Printer::promotion(){
       cout << s ;
     }
     usleep(100000);
-    fin.close();
+    
   }
+  fin.close();
 }
 void Printer::banditCharacter() {
   cout <<
