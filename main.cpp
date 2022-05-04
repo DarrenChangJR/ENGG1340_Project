@@ -28,7 +28,7 @@ int main(){
     getline(cin, name);
     string gender = "Rosmah";
     Character user(name, gender, vector<string> {}, 1000, 10);
-
+    
     // Run intro and community service func and file
     //srand to seed random generator
     srand(time(NULL));
@@ -87,13 +87,17 @@ int main(){
         } 
     }
     user.patrolCity();
-
-    // Run bandit community service and file
-
+    
+    // Run bandit file
+    Bandit bandit(35);
+    bool aliveban = fightBandit(user, bandit);
+    if(!aliveban){
+        return 0;
+    }
     // Run story connection of how the character become morded guard
-
+    main_printer.promotion();
     // Run final arc
-    Bandit mordred(5);
+    Bandit mordred(55);
     bool alive = fightMordred(user, mordred);
     if (!alive)  // ends the program if user dies lmaoo
         return 0;

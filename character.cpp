@@ -131,7 +131,7 @@ void Character::helpingChruch(){
         experience++; // can be adjusted
         luck++;
         usleep(2000000);
-        std::cout<< "Congrats you gain an Elixir"<< endl;
+        std::cout<< "Congrats you gain an Elixir!"<< endl;
         items.push_back("Elixir");
     }
     else if(reply == "No"){
@@ -188,7 +188,7 @@ void Character::foodShortage(){
         experience++; // can be adjusted
         luck++;
         usleep(2000000);
-        std::cout<< "Congrats you gain an Elixir"<< endl;
+        std::cout<< "Congrats you gain an Elixir!"<< endl;
         items.push_back("Elixir");
     }
     else if(reply == "No"){
@@ -242,7 +242,7 @@ void Character::helpingPoorAndSick(){
         experience++; // can be adjusted
         luck++;
         usleep(2000000);
-        std::cout<< "Congrats you gain an Elixir"<< endl;
+        std::cout<< "Congrats you gain an Elixir!"<< endl;
         items.push_back("Elixir");
     }
     else if(reply == "No"){
@@ -299,7 +299,7 @@ void Character::festival(){
         experience++; // can be adjusted
         luck++;
         usleep(2000000);
-        std::cout<< "Congrats you gain an Elixir"<< endl;
+        std::cout<< "Congrats you gain an Elixir!"<< endl;
         items.push_back("Elixir");
     }
         
@@ -315,7 +315,7 @@ void Character::patrolCity(){
     std::cout << "Lately there has been frequent robbery cases in Birmingham";
     usleep(4000000);
     printDots();
-    std::cout << "You have been assign to help with the patrolling the city of Birmingham";
+    std::cout << "You have been assign to help patrol the city of Birmingham";
     usleep(4000000);
     printDots();
     // User option
@@ -347,7 +347,7 @@ void Character::patrolCity(){
         experience++; // can be adjusted
         luck++;
         usleep(2000000);
-        std::cout<< "Congrats you gain an Elixir"<< endl;
+        std::cout<< "Congrats you gain an Elixir!"<< endl;
         items.push_back("Elixir");
 
         usleep(5000000);
@@ -373,7 +373,7 @@ void Character::patrolCity(){
         usleep(2000000);
         std::cout << "Your fellow comrade have reported the issue to your senior official" << endl;
         usleep(3000000);
-        std::cout << "Upon hearing the reports, the chief official acknowledges your bravery and integority" << endl;
+        std::cout << "Upon hearing the reports, the chief official acknowledges your bravery and integrity" << endl;
         usleep(4000000);
         std::cout << "He then decided to promote you to a senior knight for your excellency!" << endl;
         usleep(2000000);

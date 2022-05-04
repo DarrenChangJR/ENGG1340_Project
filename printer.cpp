@@ -28,6 +28,21 @@ void Printer::intro() {
   fin.close();
 }
 
+void Printer::promotion(){
+  // connecting the story
+  ifstream fin("scenes/promotion.txt");
+  string s;
+  while(getline(fin,s)){
+    if(s != "."){
+      cout << s << endl;
+    }
+    else{
+      cout << s ;
+    }
+    usleep(100000);
+    fin.close();
+  }
+}
 void Printer::banditCharacter() {
   cout <<
 R"(

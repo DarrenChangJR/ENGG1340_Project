@@ -10,6 +10,7 @@ class Printer {
 public:
   void battleOfCamlann();
   void intro();
+  void promotion();
   void banditCharacter();
   void banditAppear();
   void mordredCharacter();
