@@ -8,7 +8,7 @@ using namespace std;
 
 class Character {
 public:
-  Character(string, string, vector<string> user_items = {"Elixir", "Elixir", "Elixir", "Elixir", "Elixir"}, double user_experience = 1, int user_luck = 1);
+  Character(string, string, vector<string> user_items = {}, double user_experience = 1, int user_luck = 1);
   // ~Character();
 
   string getName();

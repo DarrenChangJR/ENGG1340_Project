@@ -27,7 +27,7 @@ int main(){
     cout << "Please enter your name: ";
     getline(cin, name);
     string gender = "Rosmah";
-    Character user(name, gender, vector<string> {}, 1000, 10);
+    Character user(name, gender);
     
     // Run intro and community service func and file
     //srand to seed random generator
@@ -35,7 +35,13 @@ int main(){
     int random = rand()%4;
 
     if (random == 0){
-        user.helpingChruch(); 
+        user.helpingChruch();
+
+        Bandit bandit(1);
+        bool alive = fightBandit(user, bandit);
+        if (!alive)
+            return 0;
+        
         int random0 = rand()%3;
         if(random0 == 0){
             user.foodShortage();
@@ -49,6 +55,12 @@ int main(){
     }
     else if (random == 1){
         user.foodShortage();
+
+        Bandit bandit(1);
+        bool alive = fightBandit(user, bandit);
+        if (!alive)
+            return 0;
+        
         int random1 = rand()%3;
         if(random1 == 0){
             user.helpingChruch();
@@ -61,8 +73,14 @@ int main(){
         }
     }
     else if (random == 2){
-       user.helpingPoorAndSick();
-       int random2 = rand()%3;
+        user.helpingPoorAndSick();
+
+        Bandit bandit(1);
+        bool alive = fightBandit(user, bandit);
+        if (!alive)
+            return 0;
+       
+        int random2 = rand()%3;
         if(random2 == 0){
             user.foodShortage();
         }
@@ -74,8 +92,14 @@ int main(){
         } 
     }
     else if (random == 3){
-       user.festival();
-       int random3 = rand()%3;
+        user.festival();
+
+        Bandit bandit(1);
+        bool alive = fightBandit(user, bandit);
+        if (!alive)
+            return 0;
+       
+        int random3 = rand()%3;
         if(random3 == 0){
             user.foodShortage();
         }
@@ -89,16 +113,16 @@ int main(){
     user.patrolCity();
     
     // Run bandit file
-    Bandit bandit(35);
-    bool aliveban = fightBandit(user, bandit);
-    if(!aliveban){
+    Bandit bandit(2);
+    bool alive = fightBandit(user, bandit);
+    if(!alive){
         return 0;
     }
     // Run story connection of how the character become morded guard
     main_printer.promotion();
     // Run final arc
-    Bandit mordred(55);
-    bool alive = fightMordred(user, mordred);
+    Bandit mordred(5);
+    alive = fightMordred(user, mordred);
     if (!alive)  // ends the program if user dies lmaoo
         return 0;
 
