@@ -23,7 +23,7 @@ Final boss: both
 **Functions to be created**
 * game introduction: Aidan
   - Enter name 
-  - Male / female
+  - Scenes
   - goal / motives ( explain the whole story of the young boy/ girl .....)
   - etc
  

@@ -27,7 +27,8 @@ bool fightBandit(Character &user, Bandit &bandit) {
 
       fightPrinter.banditCharacter();
       cout << bandit.getHealth() << endl;
-      cout << endl << "Health: " << health_in_fight << endl;
+      cout << endl << "User health: " << health_in_fight << endl;
+      cout << "Number of items in your backpack: " << user.getNumberOfItems() << endl;
 
       input = askUserIsProceed("Strike", "Items");
       if (input) {  // user decides to strike
@@ -100,7 +101,8 @@ bool fightMordred(Character &user, Bandit &mordred) {
 
     fightPrinter.mordredCharacter();
     cout << "           Mordred:\n              " << mordred.getHealth() << endl;
-    cout << endl << "Health: " << health_in_fight << endl;
+    cout << endl << "User health: " << health_in_fight << endl;
+    cout << "Number of items in your backpack: " << user.getNumberOfItems() << endl;
 
     bool input = askUserIsProceed("Strike", "Items");
     if (input) {  // user decides to strike

@@ -23,7 +23,7 @@ void Printer::intro() {
   string sentences;
   while(getline(fin,sentences)){
     cout << sentences << endl;
-    usleep(100000);
+    sleep(2);
   }
   fin.close();
 }
@@ -34,12 +34,13 @@ void Printer::promotion(){
   string s;
   while(getline(fin,s)){
     if(s != "."){
+      cout << endl;
       cout << s << endl;
     }
     else{
       cout << s ;
     }
-    usleep(100000);
+    sleep(2);
     
   }
   fin.close();

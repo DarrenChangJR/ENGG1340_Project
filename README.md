@@ -17,8 +17,12 @@
     - Set response of character
 * A list of features that you plan to implement, and explain how each coding element from 1 to 5 listed under the coding requirements aforementioned have supported your features.
   1. Generation of random game sets or events - Random events (e.g., 5 Community service function and only select 3 for user & random crits and dodge chances, dropping random item for stats)
-  2. Data structures for storing game status - Character attribute status depending on his response in quest
-  3. Dynamic memory management - Able to choose difficulty of enemy at run time to determine how many enemies he/she will face at the desire difficulty level.
-  4. File input/output (e.g., for loading/saving game status) - Saving current Status
-  5. Program codes in multiple files - Create 3 tasks in different files (e.g., Community service file, bandits files, and final boss file).
+  2. Data structures for storing game status - Character attribute status depending on his responses in quest
+  3. Dynamic memory management - Used to store the user items as a dynamic array (Vector).
+  4. File input/output - Used to print Scenes and character figures.
+  5. Program codes in multiple files - Create 3 tasks in different files (e.g., Character file, bandits files, fight file, input file and printer file).
+
+  * Rules
+  Follow the game play accordingly and response accord to requests.
+  Beware you could die so choose your actions carefully.
 
