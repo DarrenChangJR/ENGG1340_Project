@@ -133,7 +133,7 @@ bool fightMordred(Character &user, Bandit &mordred) {
     if (mordred.getHealth() > 0) {
       sleep(1);
       damage = mordred.getAttack();
-      cout << "\"Arthur must pay with his life!\"" << endl;
+      cout << "\"Arthur took Kara's life, now he must pay with his!\"" << endl;
       health_in_fight -= damage;
       sleep(1);
       cout << "You sustain " << damage << " damage" << endl;
