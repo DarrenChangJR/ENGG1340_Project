@@ -72,9 +72,8 @@ void printDots(){
   std::cout<< " ";
   usleep(100000);
   for(int i=1; i<4; i++){
-    std::cout << "." << " " << std::flush ;
-    int waiting = 1500000;
-    usleep(waiting);
+    std::cout << "." << " " << std::flush;
+    usleep(1500000);
   }
   std::cout << "." << endl;
 }
@@ -88,16 +87,16 @@ void printDots(){
     
 // goal to increase luck and exp
 void Character::helpingChruch(){
-    std::cout << "You have been recently assign to help out with the Chruch" ;
+    std::cout << "You have been recently assigned to help out with the Church" ;
     usleep(4000000);
     printDots();
     //usleep(4000000);
-    std::cout << "You are task with helping nurse the elderly";
+    std::cout << "You are tasked with helping nurse the elderly";
     usleep(4000000);
     printDots();
     // User option
     std::cout << "Would you like to participate?" << endl;
-    usleep(4000000);
+    usleep(1000000);
         
 
     string reply;
@@ -111,7 +110,7 @@ void Character::helpingChruch(){
 
     if(reply == "Yes"){
         std::cout << "Great Choice!" << endl;
-        std::cout << "You have officially been task with helping the elderly";
+        std::cout << "You have officially been tasked with helping the elderly";
         usleep(4000000);
         printDots();
         int sleeping1 = 0;
@@ -123,7 +122,7 @@ void Character::helpingChruch(){
         std::cout << endl;
         std::cout << "Task completed!" <<endl;
         usleep(3000000);
-        std::cout << "Congrats! your stats have been bless by your good deeds" << endl;
+        std::cout << "Congrats! Your stats have been blessed by your good deeds" << endl;
         usleep(2000000);
         std::cout << "Experience +1" << endl;
         usleep(2000000);
@@ -131,7 +130,7 @@ void Character::helpingChruch(){
         experience++; // can be adjusted
         luck++;
         usleep(2000000);
-        std::cout<< "Congrats you gain an Elixir!"<< endl;
+        std::cout<< "You gained an Elixir!"<< endl;
         items.push_back("Elixir");
     }
     else if(reply == "No"){
@@ -146,15 +145,15 @@ void Character::helpingChruch(){
     // help plant seeds
 
 void Character::foodShortage(){
-    std::cout << "You have been recently assign to help out with Food Shortage" ;
+    std::cout << "You have been recently assigned to help out with Food Shortage" ;
     usleep(4000000);
     printDots();
-    std::cout << "You are task with yeilding crop and harvesting fruits";
+    std::cout << "You are tasked with yielding crop and harvesting fruits";
     usleep(4000000);
     printDots();
     // User option
     std::cout << "Would you like to participate?" << endl;
-    usleep(4000000);
+    usleep(1000000);
         
 
     string reply;
@@ -168,7 +167,7 @@ void Character::foodShortage(){
 
     if(reply == "Yes"){
         std::cout << "Excellent Choice!" << endl;
-        std::cout << "You have officially been task with helping out food shortages in the village";
+        std::cout << "You have officially been tasked with helping out with food shortages in the village";
         usleep(4000000);
         printDots();
         int sleeping2 = 0;
@@ -180,7 +179,7 @@ void Character::foodShortage(){
         std::cout << endl;
         std::cout << "Task completed!" <<endl;
         usleep(3000000);
-        std::cout << "Congrats! your stats have been bless by your good deeds" << endl;
+        std::cout << "Congrats! Your stats have been blessed by your good deeds" << endl;
         usleep(2000000);
         std::cout << "Experience +1" << endl;
         usleep(2000000);
@@ -188,7 +187,7 @@ void Character::foodShortage(){
         experience++; // can be adjusted
         luck++;
         usleep(2000000);
-        std::cout<< "Congrats you gain an Elixir!"<< endl;
+        std::cout<< "You gained an Elixir!"<< endl;
         items.push_back("Elixir");
     }
     else if(reply == "No"){
@@ -203,12 +202,12 @@ void Character::helpingPoorAndSick(){
     std::cout << "Lately there has been an outbreak of a disease in the village nearby";
     usleep(4000000);
     printDots();
-    std::cout << "You have been recently assign to help the poor and sick villages";
+    std::cout << "You have been recently assigned to help the poor and sick villages";
     usleep(4000000);
     printDots();
     // User option
     std::cout << "Would you like to participate?" << endl;
-    usleep(4000000);
+    usleep(1000000);
         
 
     string reply;
@@ -222,7 +221,7 @@ void Character::helpingPoorAndSick(){
 
     if(reply == "Yes"){
         std::cout << "Brillant Choice!" << endl;
-        std::cout << "You have officially been task with helping the poor and sick villagers";
+        std::cout << "You have officially been tasked with helping the poor and sick villagers";
         usleep(4000000);
         printDots();
         int sleeping3 = 0;
@@ -234,7 +233,7 @@ void Character::helpingPoorAndSick(){
         std::cout << endl;
         std::cout << "Task completed!" <<endl;
         usleep(3000000);
-        std::cout << "Congrats! your stats have been bless by your good deeds" << endl;
+        std::cout << "Congrats! Your stats have been blessed by your good deeds" << endl;
         usleep(2000000);
         std::cout << "Experience +1" << endl;
         usleep(2000000);
@@ -242,7 +241,7 @@ void Character::helpingPoorAndSick(){
         experience++; // can be adjusted
         luck++;
         usleep(2000000);
-        std::cout<< "Congrats you gain an Elixir!"<< endl;
+        std::cout<< "You gained an Elixir!"<< endl;
         items.push_back("Elixir");
     }
     else if(reply == "No"){
@@ -259,7 +258,7 @@ void Character::festival(){
     std::cout << "The knights festival is comming up next month! Where all knights gathering to celebrate their great work";
     usleep(4000000);
     printDots();
-    std::cout << "You have been assign to help with the preparation of the festival";
+    std::cout << "You have been assigned to help with the preparation of the festival";
     usleep(4000000);
     printDots();
     // User option
@@ -278,7 +277,7 @@ void Character::festival(){
 
     if(reply == "Yes"){
         std::cout << "Amazing Choice!" << endl;
-        std::cout << "You have officially been tasks as an event helper for the knights festival";
+        std::cout << "You have officially been tasked as an event helper for the knights festival";
         usleep(4000000);
         printDots();
         int sleeping4 = 0;
@@ -291,7 +290,7 @@ void Character::festival(){
         std::cout << endl;
         std::cout << "Preparation Done!" <<endl;
         usleep(3000000);
-        std::cout << "Congrats! your stats have been bless by your good deeds" << endl;
+        std::cout << "Congrats! Your stats have been blessed by your good deeds" << endl;
         usleep(2000000);
         std::cout << "Experience +1" << endl;
         usleep(2000000);
@@ -299,7 +298,7 @@ void Character::festival(){
         experience++; // can be adjusted
         luck++;
         usleep(2000000);
-        std::cout<< "Congrats you gain an Elixir!"<< endl;
+        std::cout<< "You gained an Elixir!"<< endl;
         items.push_back("Elixir");
     }
         
@@ -315,7 +314,7 @@ void Character::patrolCity(){
     std::cout << "Lately there has been frequent robbery cases in Birmingham";
     usleep(4000000);
     printDots();
-    std::cout << "You have been assign to help patrol the city of Birmingham";
+    std::cout << "You have been assigned to help patrol the city of Birmingham";
     usleep(4000000);
     printDots();
     // User option
@@ -326,7 +325,7 @@ void Character::patrolCity(){
     string reply = "Yes";
 
     if(reply == "Yes"){
-        std::cout << "You have officially been tasks as a patrol offical in Birmingham";
+        std::cout << "You have officially been tasked as a patrol offical in Birmingham";
         usleep(4000000);
         printDots();
         int sleeping5 = 0;
@@ -339,7 +338,7 @@ void Character::patrolCity(){
         std::cout << endl;
         std::cout << "Well done!" <<endl;
         usleep(3000000);
-        std::cout << "Congrats! your stats have been bless by your good deeds" << endl;
+        std::cout << "Congrats! Your stats have been blessed by your good deeds" << endl;
         usleep(2000000);
         std::cout << "Experience +1" << endl;
         usleep(2000000);
@@ -347,7 +346,7 @@ void Character::patrolCity(){
         experience++; // can be adjusted
         luck++;
         usleep(2000000);
-        std::cout<< "Congrats you gain an Elixir!"<< endl;
+        std::cout<< "You gain an Elixir!"<< endl;
         items.push_back("Elixir");
 
         usleep(5000000);
