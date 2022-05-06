@@ -4,6 +4,7 @@
 #include <string>
 #include <iostream>
 
+// returns true if user chooses the first option/argument
 bool askUserIsProceed(const string &positive, const string &negative) {
   Printer options_printer;
   string input;

@@ -19,7 +19,7 @@ void Printer::battleOfCamlann() {
 
 void Printer::intro() {
   // Introduction of story
-  ifstream fin("scenes/Intro.txt");
+  ifstream fin("scenes/intro.txt");
   string sentences;
   while(getline(fin,sentences)){
     cout << sentences << endl;

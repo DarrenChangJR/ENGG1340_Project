@@ -8,8 +8,8 @@ using namespace std;
 
 class Character {
 public:
+  // Character constructor with default items, experience, and luck
   Character(string, string, vector<string> user_items = {}, double user_experience = 1, int user_luck = 1);
-  // ~Character();
 
   string getName();
 
@@ -31,6 +31,8 @@ public:
 
   int getNumberOfItems();
 
+  // input "item_number" is currently redundant, as there is only one type of item
+  // will be further developed
   void useItem(int item_number);
 
   // ------------------------------ COMMUNITY SERVICE FUNCTIONS ------------------------------//

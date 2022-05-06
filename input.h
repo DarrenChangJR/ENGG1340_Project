@@ -3,6 +3,7 @@
 
 #include <string>
 
+// returns true if user chooses the first option/argument
 bool askUserIsProceed(const string &, const string &);
 
 #endif

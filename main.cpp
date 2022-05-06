@@ -26,11 +26,12 @@ int main(){
     string name;
     cout << "Please enter your name: ";
     getline(cin, name);
+    // gender is currently redundant, will be used in future development
     string gender = "Rosmah";
     Character user(name, gender);
     
-    // Run intro and community service func and file
-    //srand to seed random generator
+    // Run intro and community service
+    // srand to seed random generator
     srand(time(NULL));
     int random = rand()%4;
 
@@ -112,14 +113,16 @@ int main(){
     }
     user.patrolCity();
     
-    // Run bandit file
+    // Run fight with bandit
     Bandit bandit(2);
     bool alive = fightBandit(user, bandit);
     if(!alive){
         return 0;
     }
+
     // Run story connection of how the character become morded guard
     main_printer.promotion();
+
     // Run final arc
     Bandit mordred(5);
     alive = fightMordred(user, mordred);
