@@ -23,11 +23,28 @@ void Printer::intro() {
   string sentences;
   while(getline(fin,sentences)){
     cout << sentences << endl;
-    usleep(100000);
+    sleep(2);
   }
   fin.close();
 }
 
+void Printer::promotion(){
+  // connecting the story
+  ifstream fin("scenes/promotion.txt");
+  string s;
+  while(getline(fin,s)){
+    if(s != "."){
+      cout << endl;
+      cout << s << endl;
+    }
+    else{
+      cout << s ;
+    }
+    sleep(2);
+    
+  }
+  fin.close();
+}
 void Printer::banditCharacter() {
   cout <<
 R"(
@@ -50,12 +67,44 @@ R"(
           /_\     ||
                   ||
                  /_|
-           Health:
-)";
+      Bandit Health: )";
 }
 
 void Printer::banditAppear() {
   cout << "You are ambushed by bandits!";
+}
+
+void Printer::mordredCharacter() {
+  ifstream fin("scenes/mordred.txt");
+  string scene_line;
+  while (getline(fin, scene_line))
+    cout << scene_line << endl;
+  fin.close();
+}
+
+void Printer::mordredAppear() {
+  ifstream fin("scenes/mordred.txt");
+  string scene_line;
+  while (getline(fin, scene_line)) {
+    cout << scene_line << endl;
+    usleep(300000);
+  }
+  fin.close();
+
+  string dramatic_line = "Arthur... You gave me no choice...";
+  for (int i = 0; i < dramatic_line.size(); ++i) {
+    cout << dramatic_line[i];
+    usleep(200000);
+  }
+  cout << endl;
+}
+
+void Printer::mistake() {
+  cout << "You wasted time searching for items...\nA mistake in battle is an invitation for death...";
+}
+
+void Printer::elixir() {
+  cout << "You consume an elixir of health, and you heal to full health...";
 }
 
 void Printer::death() {
@@ -68,17 +117,15 @@ ______ _____  ___ _____ _   _
 | |/ /| |___| | | || | | | | |
 |___/ \____/\_| |_/\_/ \_| |_/
 
-You succumb to the darkness of death...
-Returning to the last saved state.
-)";
+You succumb to the darkness of death)";
 }
 
-void Printer::optionsFight() {
-  cout << "Attack / Flee : ";
+void Printer::options(const string &positive, const string &negative) {
+  cout << positive << " / " << negative << " : ";
 }
 
-void Printer::optionsService() {
-  cout << "Yes / No : ";
+void Printer::flee() {
+  cout << "Faster than wind, you flee the scene...\n";
 }
 
 void Printer::accolade() {
@@ -89,6 +136,7 @@ void Printer::accolade() {
     usleep(100000);
   }
   fin.close();
+  sleep(5);
 }
 
 void Printer::ending() {
@@ -99,4 +147,12 @@ void Printer::ending() {
     sleep(1);
   }
   fin.close();
+}
+
+void Printer::credits() {
+  string s = "Thanks for playing \"Battle Of Camlann\"\nCreated by Aidan and Darren\n";
+  for (int i = 0; i < s.size(); ++i) {
+    cout << s[i] << flush;
+    usleep(200000);
+  }
 }

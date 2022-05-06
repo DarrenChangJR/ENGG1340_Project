@@ -2,9 +2,10 @@
 #define FIGHTBANDIT_H
 
 #include "bandit.h"
+#include "character.h"
 
-void fightBandit(Character, Bandit);
+bool fightBandit(Character &, Bandit &);
 
-// void fightMordred(Character, Mordred);
+bool fightMordred(Character &, Bandit &);
 
 #endif

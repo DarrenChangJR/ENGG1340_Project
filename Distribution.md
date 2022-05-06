@@ -23,7 +23,7 @@ Final boss: both
 **Functions to be created**
 * game introduction: Aidan
   - Enter name 
-  - Male / female
+  - Scenes
   - goal / motives ( explain the whole story of the young boy/ girl .....)
   - etc
  
@@ -49,7 +49,7 @@ Final boss: both
 * Health [Double]
 * Damage [Double]
 * Luck/crit chance [int] (so when crit chance increase we increase a variable call crit then when randomising we take our total random - crit to get the number we random in.)
-* Items (Max items 5?) (Armour, sword, sheild, spear and long axe) So an array of 5 items [Array of strings]
+* Items (Elixir) stored using a vector
 * Experience (XP lvl 1-5 lvl) (Increase Experience by holy blessing) [Double]
 
 Extra stuff:
