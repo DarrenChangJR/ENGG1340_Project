@@ -8,6 +8,7 @@
 
 using namespace std;
 
+// definition for Character contructor
 Character::Character(string user_name, string user_gender, vector<string> user_items, double user_experience, int user_luck) {
   name = user_name;
   gender = user_gender;
@@ -20,36 +21,45 @@ string Character::getName() {
   return name;
 }
 
+// currently unused, for future development
 string Character::getGender() {
   return gender;
 }
 
+// returns randomised value of attack based on user experience and luck
 double Character::getAttack() {
   srand(time(NULL));
   double total_attack = (experience * 30) + (rand() % (luck * 10));
   return total_attack;
 }
 
+// returns user health as a multiple of experience
 double Character::getHealth() {
   return experience * 100;
 }
 
+// currently unused, for future development
 double Character::getExperience() {
   return experience;
 }
 
+// currently unused, for future development
 int Character::getLuck() {
   return luck;
 }
 
+// currently unused, for future development
 void Character::incrementExperience() {
   ++experience;
 }
 
+// currently unused, for future development
 void Character::incrementLuck() {
   ++luck;
 }
 
+// prints the items owned by the user
+// uses vector iterator to access the user's items stored with Dynamic Memory Management
 void Character::printItems() {
   int counter = 0;
   for (vector<string>::iterator i = items.begin(); i != items.end(); ++i) {
@@ -61,13 +71,13 @@ int Character::getNumberOfItems() {
   return items.size();
 }
 
+// input "item_number" is currently redundant, as there is only one type of item
+// will be further developed
 void Character::useItem(int item_number) {
   items.pop_back();
 }
 
-// Character::~Character() {
-//   delete[] s;
-// }
+
 void printDots(){
   std::cout<< " ";
   usleep(100000);

@@ -8,7 +8,7 @@
 #include <string>
 #include <unistd.h>
 
-
+// returns true if user survives the fight, false otherwise
 bool fightBandit(Character &user, Bandit &bandit) {
   Printer fightPrinter;
 
@@ -89,6 +89,7 @@ bool fightBandit(Character &user, Bandit &bandit) {
   return true;
 }
 
+// returns true if user survives the fight, false otherwise
 bool fightMordred(Character &user, Bandit &mordred) {
   Printer fightPrinter;
 
