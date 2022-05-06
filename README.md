@@ -14,6 +14,7 @@
   * User Commands
     - Yes/No
     - Attack/Flee
+    - Strike/Items
   * Rules
     - Basic inputs using keyboard, type either of the 2 given options whenever prompted.
     - Beware, death results in program termination, so choose your actions carefully (TIP: good things happen to helpful people in this game).
