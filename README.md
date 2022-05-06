@@ -14,6 +14,9 @@
   * User Commands
     - Yes/No
     - Attack/Flee
+  * Rules
+  - Basic inputs using keyboard, type either of the 2 given options whenever prompted.
+  - Beware, death results in program termination, so choose your actions carefully (TIP: good things happen to helpful people in this game).
 * A list of features that you have implemented, and explain how each coding element from 1 to 5 listed under the coding requirements aforementioned have supported your features.
   1. Generation of random game sets or events - Random events (e.g., 5 Community service function and only select 3 for user & random crit chances)
   2. Data structures for storing game status - Use Character class to instantiate 'user' object, and Bandit class to instantiate 'bandit' objects, with respective unique stats.
@@ -25,6 +28,3 @@
 * Compilation and execution instructions.
   - `make main`
   - `./main`
-* Rules
-  Basic inputs using keyboard, type either of the 2 given options whenever prompted.
-  Beware, death results in program termination, so choose your actions carefully (TIP: good things happen to helpful people in this game).
