@@ -26,5 +26,6 @@
 * A list of non-standard C/C++ libraries.
   - None, all includes are from standard libraries
 * Compilation and execution instructions.
+  - tested on academy11 server
   - `make main`
   - `./main`
