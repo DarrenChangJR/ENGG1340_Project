@@ -24,5 +24,5 @@
 
 **Rules**\
   Follow the game play accordingly and response accord to requests.\
-  Beware you could die so choose your actions carefully.\
+  Beware you could die so choose your actions carefully.
 
