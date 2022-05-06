@@ -22,7 +22,7 @@
   4. File input/output - Used to print Scenes and character figures.
   5. Program codes in multiple files - Create 3 tasks in different files (e.g., Character file, bandits files, fight file, input file and printer file).
 
-**Rules**
-  Follow the game play accordingly and response accord to requests.
-  Beware you could die so choose your actions carefully.
+**Rules**\
+  Follow the game play accordingly and response accord to requests.\
+  Beware you could die so choose your actions carefully.\
 
