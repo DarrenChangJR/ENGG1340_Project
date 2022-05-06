@@ -30,3 +30,8 @@
   - tested on academy11 server
   - `make main`
   - `./main`
+
+* ASCII art Sources
+  - [King Accolade by sst](https://www.asciiart.eu/people/occupations/kings)
+  - [Mordred Knight by hjw](https://ascii.co.uk/art/knights)
+  - Bandit modelled after [Ascii Assassin by Beiz86](https://www.deviantart.com/beiz86/art/Ascii-Assassin-809582924)
